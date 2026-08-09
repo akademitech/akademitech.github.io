@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AkademiTech | Pengenalan Dasar HTML</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body class="tutorial-page">
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class='bx bxs-graduation'></i> Akademi<span>Tech</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#courses">Program</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="tutorial-layout container">
+        <aside class="sidebar glass-panel">
+            <h3>Daftar Materi</h3>
+            <ul class="sidebar-links">
+                <li><a href="pengenalan-dasar.html">1. Pengenalan Dasar HTML</a></li>
+                <li><a href="tag-elemen-atribut.html">2. Tag, Elemen, Atribut</a></li>
+                <li><a href="teks-paragraf.html">3. Membuat Paragraf</a></li>
+                <li><a href="heading-formatting.html">4. Heading & Formatting</a></li>
+                <li><a href="membuat-link.html">5. Membuat Link</a></li>
+                <li><a href="gambar-tabel.html">6. Gambar dan Tabel</a></li>
+                <li><a href="membuat-list.html">7. Membuat List</a></li>
+                <li><a href="membuat-form.html">9. Membuat Form</a></li>
+                <li><a href="elemen-semantik.html">10. Elemen Semantik</a></li>
+                <li><a href="menampilkan-video.html">11. Video pada HTML</a></li>
+                <li><a href="menambahkan-audio.html">12. Audio pada HTML</a></li>
+                <li><a href="pengenalan-css.html">13. Dasar CSS</a></li>
+                <li><a href="selektor-css.html">14. 5 Macam Selektor</a></li>
+                <li><a href="project-web.html">15. Project Web</a></li>
+            </ul>
+        </aside>
+
+        <main class="tutorial-content">
+            <section class="tutorial-section glass-panel">
+                <h2>Pengenalan Dasar HTML</h2>
+                
+        <p>HTML (HyperText Markup Language) adalah fondasi paling dasar dari setiap halaman web. HTML bukan bahasa pemrograman yang memiliki logika seperti if-else atau perulangan, melainkan sebuah <strong>bahasa markup</strong> yang bertugas memberitahu *web browser* (seperti Google Chrome atau Firefox) bagaimana cara menyusun dan menampilkan teks, gambar, dan konten lainnya ke layar.</p>
+        
+        <h3>Sejarah Singkat HTML</h3>
+        <p>HTML pertama kali diciptakan oleh Tim Berners-Lee pada tahun 1991. Sejak saat itu, HTML terus berkembang pesat seiring dengan perkembangan internet. Versi terbaru saat ini adalah HTML5, yang dirilis pada tahun 2014. HTML5 membawa revolusi besar karena mendukung berbagai fitur multimedia modern seperti pemutaran video dan audio tanpa memerlukan *plugin* tambahan seperti Flash Player.</p>
+
+        <h3>Struktur Dasar Dokumen HTML</h3>
+        <p>Untuk membuat file HTML, Anda harus menyimpannya dengan ekstensi <code>.html</code> (misalnya <code>index.html</code>). Di dalam file tersebut, Anda harus menuliskan kerangka dasar yang menjadi standar wajib agar website dapat dibaca dengan benar oleh browser.</p>
+        
+        <div class='code-block'>
+            <div class="code-header"><span>index.html</span></div>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Halaman Pertamaku&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Halo, Selamat Datang di Dunia Web!&lt;/h1&gt;
+    &lt;p&gt;Ini adalah kalimat pertama yang saya tampilkan di web.&lt;/p&gt;
+    &lt;p&gt;Saya sedang belajar membuat website dari nol.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+        
+        <h3>Penjelasan Anatomi Kode:</h3>
+        <ul class="custom-list">
+            <li><strong><code>&lt;!DOCTYPE html&gt;</code>:</strong> Ini adalah deklarasi tipe dokumen. Tag ini sangat penting untuk memberi tahu browser bahwa kita menggunakan spesifikasi HTML5 terbaru.</li>
+            <li><strong><code>&lt;html lang="id"&gt;</code>:</strong> Merupakan elemen akar (root). Semua kode HTML dibungkus di sini. Atribut <code>lang="id"</code> menandakan bahwa bahasa utama website ini adalah bahasa Indonesia, yang sangat membantu Mesin Pencari (Google) dan aplikasi pembaca layar.</li>
+            <li><strong><code>&lt;head&gt;</code>:</strong> Bagian kepala ini berisi informasi *meta-data*. Apapun yang ditulis di dalam head (kecuali title) <strong>tidak akan tampil di layar browser</strong>. Di sinilah kita meletakkan deskripsi web, memanggil file CSS, dan file Javascript.</li>
+            <li><strong><code>&lt;meta charset="UTF-8"&gt;</code>:</strong> Menentukan jenis karakter (encoding) yang digunakan, UTF-8 mencakup hampir semua karakter dan simbol di dunia.</li>
+            <li><strong><code>&lt;meta name="viewport"&gt;</code>:</strong> Memastikan website terlihat baik (*responsive*) saat dibuka di perangkat *mobile* (smartphone).</li>
+            <li><strong><code>&lt;title&gt;</code>:</strong> Judul halaman yang akan muncul di tab (jendela) atas browser Anda, sekaligus menjadi judul yang tampil di hasil pencarian Google.</li>
+            <li><strong><code>&lt;body&gt;</code>:</strong> Bagian tubuh (*body*) inilah yang merupakan kanvas utama Anda. Semua teks, gambar, tabel, dan video yang ingin dilihat oleh pengunjung web harus dimasukkan ke dalam area ini.</li>
+        </ul>
+        
+        <div class='info-box'>
+            <i class='bx bx-check-shield'></i>
+            <p><strong>Tips Praktis:</strong> Jika Anda menggunakan kode editor *Visual Studio Code*, Anda bisa langsung mengetikkan tanda seru <code>!</code> lalu menekan tombol <strong>Tab</strong> atau <strong>Enter</strong> untuk menghasilkan kerangka dasar HTML5 ini secara otomatis tanpa harus mengetiknya satu per satu.</p>
+        </div>
+        
+                
+                <div style="margin-top: 40px; display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                    <a href="#" class="btn btn-secondary" style="display: none;">Materi Sebelumnya</a>
+                    <a href="tag-elemen-atribut.html" class="btn btn-primary" style="display: inline-block;">Materi Selanjutnya</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <footer class="footer">
+        <div class="container"><div class="footer-bottom"><p>&copy; 2026 AkademiTech Tutorials.</p></div></div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

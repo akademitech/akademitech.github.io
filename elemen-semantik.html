@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AkademiTech | Elemen Semantik HTML5</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body class="tutorial-page">
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class='bx bxs-graduation'></i> Akademi<span>Tech</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#courses">Program</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="tutorial-layout container">
+        <aside class="sidebar glass-panel">
+            <h3>Daftar Materi</h3>
+            <ul class="sidebar-links">
+                <li><a href="pengenalan-dasar.html">1. Pengenalan Dasar HTML</a></li>
+                <li><a href="tag-elemen-atribut.html">2. Tag, Elemen, Atribut</a></li>
+                <li><a href="teks-paragraf.html">3. Membuat Paragraf</a></li>
+                <li><a href="heading-formatting.html">4. Heading & Formatting</a></li>
+                <li><a href="membuat-link.html">5. Membuat Link</a></li>
+                <li><a href="gambar-tabel.html">6. Gambar dan Tabel</a></li>
+                <li><a href="membuat-list.html">7. Membuat List</a></li>
+                <li><a href="membuat-form.html">9. Membuat Form</a></li>
+                <li><a href="elemen-semantik.html">10. Elemen Semantik</a></li>
+                <li><a href="menampilkan-video.html">11. Video pada HTML</a></li>
+                <li><a href="menambahkan-audio.html">12. Audio pada HTML</a></li>
+                <li><a href="pengenalan-css.html">13. Dasar CSS</a></li>
+                <li><a href="selektor-css.html">14. 5 Macam Selektor</a></li>
+                <li><a href="project-web.html">15. Project Web</a></li>
+            </ul>
+        </aside>
+
+        <main class="tutorial-content">
+            <section class="tutorial-section glass-panel">
+                <h2>Elemen Semantik HTML5</h2>
+                
+        <p>Sebelum lahirnya HTML5, cara programmer mendesain layout (*struktur*) website sangat berantakan. Kita membagi header, kolom isi, dan footer hanya menggunakan satu tag: <code>&lt;div&gt;</code> (Division). Kita membedakannya dengan menambahkan class, misalnya <code>&lt;div class="header"&gt;</code>, <code>&lt;div class="sidebar"&gt;</code>, <code>&lt;div class="footer"&gt;</code>.</p>
+        
+        <p>Masalahnya, komputer (Google Search Bot dan aplikasi pembaca layar) tidak mengerti apa isi dari <code>&lt;div&gt;</code> tersebut. Bagi mereka, itu hanya sebuah "kotak" biasa tanpa arti.</p>
+        
+        <h3>Masuklah Konsep Semantik HTML5</h3>
+        <p>HTML5 memperkenal elemen <strong>Semantik</strong>. Semantik berarti "memiliki makna". Tag-tag ini tidak hanya berfungsi sebagai kotak layout, tetapi juga <strong>mengomunikasikan makna</strong> dari blok konten tersebut kepada *browser* dan mesin pencari.</p>
+
+        <h3>Daftar Tag Semantik Utama</h3>
+        <ul class="custom-list">
+            <li><strong><code>&lt;header&gt;</code></strong> : Area kepala. Digunakan untuk membungkus judul situs web, logo, dan menu navigasi.</li>
+            <li><strong><code>&lt;nav&gt;</code></strong> : Navigasi utama. Digunakan untuk membungkus kelompok link menu (seperti Home, About, Contact).</li>
+            <li><strong><code>&lt;main&gt;</code></strong> : Merupakan penanda konten pokok/utama dari halaman. Hanya boleh ada satu <code>&lt;main&gt;</code> per halaman web.</li>
+            <li><strong><code>&lt;section&gt;</code></strong> : Merupakan bagian tematik spesifik dari halaman, biasanya diawali dengan heading (h2/h3). (Misal: Section Tentang Kami, Section Layanan).</li>
+            <li><strong><code>&lt;article&gt;</code></strong> : Digunakan untuk membungkus konten independen yang bisa berdiri sendiri (Jika dicabut dari web tersebut dan ditaruh di tempat lain, ia tetap bermakna utuh). Contoh: Postingan Blog, Komentar, Berita.</li>
+            <li><strong><code>&lt;aside&gt;</code></strong> : Konten sampingan (Sidebar) yang berkaitan, namun tidak menjadi fokus utama dari halaman. Contoh: Daftar artikel terpopuler, iklan banner.</li>
+            <li><strong><code>&lt;footer&gt;</code></strong> : Area kaki halaman. Tempat menaruh informasi Hak Cipta, tautan sosial media, dan informasi kontak.</li>
+        </ul>
+
+        <h3>Contoh Implementasi Layout Semantik Lengkap:</h3>
+        <div class='code-block'>
+            <pre><code>&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Portal Berita Terkini&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Politik&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Olahraga&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Teknologi&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+        &lt;section id="berita-utama"&gt;
+            &lt;h2&gt;Berita Hari Ini&lt;/h2&gt;
+            
+            &lt;article&gt;
+                &lt;h3&gt;Apple Merilis iPhone 20 Pro&lt;/h3&gt;
+                &lt;p&gt;Apple kembali membuat kejutan dengan meluncurkan...&lt;/p&gt;
+            &lt;/article&gt;
+            
+            &lt;article&gt;
+                &lt;h3&gt;Timnas Menang Telak!&lt;/h3&gt;
+                &lt;p&gt;Pertandingan mendebarkan semalam berakhir dengan...&lt;/p&gt;
+            &lt;/article&gt;
+        &lt;/section&gt;
+        
+        &lt;aside&gt;
+            &lt;h3&gt;Artikel Terpopuler&lt;/h3&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Cara Cepat Belajar HTML&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/aside&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+        &lt;p&gt;&amp;copy; 2026 Portal Berita. All rights reserved.&lt;/p&gt;
+        &lt;a href="privasi.html"&gt;Kebijakan Privasi&lt;/a&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+        </div>
+        
+        <div class='info-box'>
+            <i class='bx bx-trophy'></i>
+            <p><strong>Keuntungan:</strong> Dengan menggunakan tag semantik, Google (SEO) akan memberikan peringkat yang jauh lebih baik kepada website Anda karena bot mereka dapat merayapi dan memahami struktur konten Anda dengan akurat. Selain itu kode HTML Anda menjadi sangat rapi dan *readable* bagi manusia.</p>
+        </div>
+        
+                
+                <div style="margin-top: 40px; display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                    <a href="membuat-form.html" class="btn btn-secondary" style="display: inline-block;">Materi Sebelumnya</a>
+                    <a href="menampilkan-video.html" class="btn btn-primary" style="display: inline-block;">Materi Selanjutnya</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <footer class="footer">
+        <div class="container"><div class="footer-bottom"><p>&copy; 2026 AkademiTech Tutorials.</p></div></div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

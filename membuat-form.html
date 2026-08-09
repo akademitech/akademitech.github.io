@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AkademiTech | Membuat Form Lengkap pada HTML</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body class="tutorial-page">
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class='bx bxs-graduation'></i> Akademi<span>Tech</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#courses">Program</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="tutorial-layout container">
+        <aside class="sidebar glass-panel">
+            <h3>Daftar Materi</h3>
+            <ul class="sidebar-links">
+                <li><a href="pengenalan-dasar.html">1. Pengenalan Dasar HTML</a></li>
+                <li><a href="tag-elemen-atribut.html">2. Tag, Elemen, Atribut</a></li>
+                <li><a href="teks-paragraf.html">3. Membuat Paragraf</a></li>
+                <li><a href="heading-formatting.html">4. Heading & Formatting</a></li>
+                <li><a href="membuat-link.html">5. Membuat Link</a></li>
+                <li><a href="gambar-tabel.html">6. Gambar dan Tabel</a></li>
+                <li><a href="membuat-list.html">7. Membuat List</a></li>
+                <li><a href="membuat-form.html">9. Membuat Form</a></li>
+                <li><a href="elemen-semantik.html">10. Elemen Semantik</a></li>
+                <li><a href="menampilkan-video.html">11. Video pada HTML</a></li>
+                <li><a href="menambahkan-audio.html">12. Audio pada HTML</a></li>
+                <li><a href="pengenalan-css.html">13. Dasar CSS</a></li>
+                <li><a href="selektor-css.html">14. 5 Macam Selektor</a></li>
+                <li><a href="project-web.html">15. Project Web</a></li>
+            </ul>
+        </aside>
+
+        <main class="tutorial-content">
+            <section class="tutorial-section glass-panel">
+                <h2>Membuat Form Lengkap pada HTML</h2>
+                
+        <p>Form (Formulir) adalah komponen paling penting untuk mendapatkan masukan data dari pengguna (Input). Mulai dari halaman Login, Registrasi akun, Kolom Pencarian (Search), hingga Checkout belanja di Tokopedia, semuanya dibangun menggunakan Form HTML.</p>
+
+        <h3>Kerangka Utama: <code>&lt;form&gt;</code></h3>
+        <p>Setiap kotak input harus dibungkus oleh tag <code>&lt;form&gt;</code>. Tag ini mengontrol kemana data input akan dilempar ke server setelah tombol Submit ditekan.</p>
+        <ul class="custom-list">
+            <li><strong>Atribut <code>action</code>:</strong> Menentukan lokasi URL/Script yang akan memproses form (contoh: <code>action="proses_login.php"</code>).</li>
+            <li><strong>Atribut <code>method</code>:</strong> Metode pengiriman data. <strong>GET</strong> akan melampirkan data ke URL (cocok untuk pencarian), <strong>POST</strong> akan menyembunyikan data (wajib digunakan untuk input rahasia seperti Password).</li>
+        </ul>
+        
+        <h3>Elemen-elemen Input Dasar</h3>
+        <p>Sebagian besar interaksi pengguna ditangkap melalui tag <code>&lt;input&gt;</code>. Bentuk kotak input ini bisa berubah drastis hanya dengan mengganti nilai atribut <code>type</code>.</p>
+        
+        <div class='code-block'>
+            <pre><code>&lt;form action="registrasi.php" method="POST"&gt;
+    
+    &lt;!-- 1. Text (Input Biasa) --&gt;
+    &lt;label for="nama_lengkap"&gt;Nama Lengkap:&lt;/label&gt;
+    &lt;input type="text" id="nama_lengkap" name="nama" placeholder="Masukkan nama Anda..." required&gt;
+    
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;!-- 2. Email (Khusus Email, divalidasi otomatis oleh HTML5) --&gt;
+    &lt;label for="alamat_email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="alamat_email" name="email" required&gt;
+    
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;!-- 3. Password (Karakter akan disensor menjadi bintang/titik) --&gt;
+    &lt;label for="sandi"&gt;Kata Sandi:&lt;/label&gt;
+    &lt;input type="password" id="sandi" name="password" minlength="8" required&gt;
+    
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;!-- 4. Radio Button (Hanya bisa pilih SATU opsi, pastikan atribut 'name' bernilai sama) --&gt;
+    &lt;label&gt;Jenis Kelamin:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="radio" id="pria" name="gender" value="L"&gt;
+    &lt;label for="pria"&gt;Laki-laki&lt;/label&gt;
+    &lt;input type="radio" id="wanita" name="gender" value="P"&gt;
+    &lt;label for="wanita"&gt;Perempuan&lt;/label&gt;
+    
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;!-- 5. Checkbox (Bisa memilih BANYAK opsi / Centang) --&gt;
+    &lt;label&gt;Hobi:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="checkbox" name="hobi1" value="membaca"&gt; Membaca
+    &lt;input type="checkbox" name="hobi2" value="olahraga"&gt; Olahraga
+    &lt;input type="checkbox" name="hobi3" value="coding" checked&gt; Coding
+    
+    &lt;br&gt;&lt;br&gt;
+    
+    &lt;!-- 6. Select (Dropdown pilihan) --&gt;
+    &lt;label for="kota"&gt;Kota Asal:&lt;/label&gt;
+    &lt;select id="kota" name="kota"&gt;
+        &lt;option value=""&gt;-- Pilih Kota --&lt;/option&gt;
+        &lt;option value="jakarta"&gt;Jakarta&lt;/option&gt;
+        &lt;option value="bandung"&gt;Bandung&lt;/option&gt;
+        &lt;option value="surabaya"&gt;Surabaya&lt;/option&gt;
+    &lt;/select&gt;
+
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;!-- 7. Textarea (Kolom teks panjang multi-baris) --&gt;
+    &lt;label for="alamat"&gt;Alamat Domisili:&lt;/label&gt;&lt;br&gt;
+    &lt;textarea id="alamat" name="alamat" rows="4" cols="40" placeholder="Jalan Raya No.1..."&gt;&lt;/textarea&gt;
+
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;!-- 8. Tombol Submit (Memicu pengiriman form) --&gt;
+    &lt;button type="submit"&gt;Daftar Sekarang&lt;/button&gt;
+    
+&lt;/form&gt;</code></pre>
+        </div>
+
+        <h3>Membedah Atribut-Atribut Penting di Input:</h3>
+        <ul class="custom-list">
+            <li><code>name="..."</code>: Atribut PALING PENTING. Variabel pengenal yang digunakan oleh *Server/Backend* untuk mengambil nilai yang diketik *user*.</li>
+            <li><code>placeholder="..."</code>: Teks abu-abu sementara (petunjuk) di dalam kotak input yang menghilang saat diketik.</li>
+            <li><code>required</code>: Atribut *boolean* (tanpa nilai). Jika disematkan, form tidak akan bisa dikirim sebelum *user* mengisi kolom tersebut.</li>
+            <li><code>value="..."</code>: Nilai bawaan (*default*) yang sudah ada di kotak, atau nilai yang diwakili oleh opsi Radio/Checkbox tersebut saat terpilih.</li>
+            <li><code>id="..."</code>: Digunakan untuk menghubungkan input dengan labelnya (melalui atribut <code>for</code> pada elemen <code>&lt;label&gt;</code>). Jika label diklik, input akan otomatis mendapat fokus kursor.</li>
+        </ul>
+        
+                
+                <div style="margin-top: 40px; display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                    <a href="membuat-list.html" class="btn btn-secondary" style="display: inline-block;">Materi Sebelumnya</a>
+                    <a href="elemen-semantik.html" class="btn btn-primary" style="display: inline-block;">Materi Selanjutnya</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <footer class="footer">
+        <div class="container"><div class="footer-bottom"><p>&copy; 2026 AkademiTech Tutorials.</p></div></div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

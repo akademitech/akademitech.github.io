@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AkademiTech | Membuat Link (Tautan) pada HTML</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body class="tutorial-page">
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class='bx bxs-graduation'></i> Akademi<span>Tech</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#courses">Program</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="tutorial-layout container">
+        <aside class="sidebar glass-panel">
+            <h3>Daftar Materi</h3>
+            <ul class="sidebar-links">
+                <li><a href="pengenalan-dasar.html">1. Pengenalan Dasar HTML</a></li>
+                <li><a href="tag-elemen-atribut.html">2. Tag, Elemen, Atribut</a></li>
+                <li><a href="teks-paragraf.html">3. Membuat Paragraf</a></li>
+                <li><a href="heading-formatting.html">4. Heading & Formatting</a></li>
+                <li><a href="membuat-link.html">5. Membuat Link</a></li>
+                <li><a href="gambar-tabel.html">6. Gambar dan Tabel</a></li>
+                <li><a href="membuat-list.html">7. Membuat List</a></li>
+                <li><a href="membuat-form.html">9. Membuat Form</a></li>
+                <li><a href="elemen-semantik.html">10. Elemen Semantik</a></li>
+                <li><a href="menampilkan-video.html">11. Video pada HTML</a></li>
+                <li><a href="menambahkan-audio.html">12. Audio pada HTML</a></li>
+                <li><a href="pengenalan-css.html">13. Dasar CSS</a></li>
+                <li><a href="selektor-css.html">14. 5 Macam Selektor</a></li>
+                <li><a href="project-web.html">15. Project Web</a></li>
+            </ul>
+        </aside>
+
+        <main class="tutorial-content">
+            <section class="tutorial-section glass-panel">
+                <h2>Membuat Link (Tautan) pada HTML</h2>
+                
+        <p>World Wide Web (Jaring Laba-Laba Seluruh Dunia) tidak akan pernah ada tanpa yang namanya <strong>Hyperlink</strong>. Link adalah komponen revolusioner yang memungkinkan kita melompat dari satu halaman ke halaman lainnya hanya dengan satu klik.</p>
+        
+        <h3>Dasar Penggunaan Tag Anchor <code>&lt;a&gt;</code></h3>
+        <p>Untuk membuat link, kita menggunakan tag <code>&lt;a&gt;</code> (kependekan dari *anchor* atau jangkar). Syarat mutlak menggunakan tag ini adalah menambahkan atribut <code>href</code> (Hypertext Reference) yang berisi alamat URL tujuan.</p>
+
+        <div class='code-block'>
+            <pre><code>&lt;p&gt;Silakan kunjungi &lt;a href="https://google.com"&gt;Mesin Pencari Google&lt;/a&gt; untuk mencari materi.&lt;/p&gt;</code></pre>
+        </div>
+
+        <h3>Mengatur Target Link</h3>
+        <p>Secara default (bawaan), ketika Anda mengklik link, browser akan memuat halaman tujuan di tab/jendela yang sama, menggantikan halaman saat ini. Seringkali, saat menautkan ke website orang lain, kita ingin link tersebut terbuka di <strong>tab baru</strong> agar pengunjung tidak pergi dari website kita. Gunakan atribut <code>target="_blank"</code>.</p>
+        
+        <div class='code-block'>
+            <pre><code>&lt;a href="https://wikipedia.org" target="_blank"&gt;Buka Wikipedia di Tab Baru&lt;/a&gt;</code></pre>
+        </div>
+
+        <h3>Berbagai Macam URL Tujuan (Jenis Link)</h3>
+        <p>Atribut <code>href</code> tidak hanya diisi dengan link website utuh. Berikut adalah beberapa variasinya:</p>
+        
+        <ul class="custom-list">
+            <li><strong>Link Absolut (Absolute URL):</strong> Tautan lengkap menuju website di domain lain. Harus dimulai dengan `http://` atau `https://`.<br><code>href="https://facebook.com"</code></li>
+            <li><strong>Link Relatif (Relative URL):</strong> Tautan menuju file lain di dalam folder website Anda sendiri. Tidak perlu awalan https.<br><code>href="tentang-kami.html"</code> atau <code>href="pages/kontak.html"</code></li>
+            <li><strong>Link Email (Mailto):</strong> Akan otomatis memanggil aplikasi pengirim email (seperti Outlook/Gmail) di komputer/HP pengguna lengkap dengan alamat tujuan.<br><code>href="mailto:admin@website.com"</code></li>
+            <li><strong>Link Telepon / Whatsapp:</strong> Memanggil aplikasi panggilan telepon (di HP).<br><code>href="tel:+62812345678"</code></li>
+            <li><strong>Link Bookmark (In-Page Link):</strong> Tautan yang tidak pindah halaman, tetapi membuat browser *scroll* melompat ke bagian tertentu di halaman yang sama. Syaratnya, elemen tujuan harus diberi atribut <code>id</code>, lalu link memanggil ID tersebut menggunakan simbol tagar <code>#</code>.<br><code>&lt;a href="#bagian-footer"&gt;Scroll ke Bawah&lt;/a&gt;</code></li>
+        </ul>
+        
+                
+                <div style="margin-top: 40px; display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                    <a href="heading-formatting.html" class="btn btn-secondary" style="display: inline-block;">Materi Sebelumnya</a>
+                    <a href="gambar-tabel.html" class="btn btn-primary" style="display: inline-block;">Materi Selanjutnya</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <footer class="footer">
+        <div class="container"><div class="footer-bottom"><p>&copy; 2026 AkademiTech Tutorials.</p></div></div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

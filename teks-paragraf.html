@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AkademiTech | Membuat Teks dan Paragraf di HTML</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body class="tutorial-page">
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class='bx bxs-graduation'></i> Akademi<span>Tech</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#courses">Program</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="tutorial-layout container">
+        <aside class="sidebar glass-panel">
+            <h3>Daftar Materi</h3>
+            <ul class="sidebar-links">
+                <li><a href="pengenalan-dasar.html">1. Pengenalan Dasar HTML</a></li>
+                <li><a href="tag-elemen-atribut.html">2. Tag, Elemen, Atribut</a></li>
+                <li><a href="teks-paragraf.html">3. Membuat Paragraf</a></li>
+                <li><a href="heading-formatting.html">4. Heading & Formatting</a></li>
+                <li><a href="membuat-link.html">5. Membuat Link</a></li>
+                <li><a href="gambar-tabel.html">6. Gambar dan Tabel</a></li>
+                <li><a href="membuat-list.html">7. Membuat List</a></li>
+                <li><a href="membuat-form.html">9. Membuat Form</a></li>
+                <li><a href="elemen-semantik.html">10. Elemen Semantik</a></li>
+                <li><a href="menampilkan-video.html">11. Video pada HTML</a></li>
+                <li><a href="menambahkan-audio.html">12. Audio pada HTML</a></li>
+                <li><a href="pengenalan-css.html">13. Dasar CSS</a></li>
+                <li><a href="selektor-css.html">14. 5 Macam Selektor</a></li>
+                <li><a href="project-web.html">15. Project Web</a></li>
+            </ul>
+        </aside>
+
+        <main class="tutorial-content">
+            <section class="tutorial-section glass-panel">
+                <h2>Membuat Teks dan Paragraf di HTML</h2>
+                
+        <p>Lebih dari 80% isi dari website modern adalah teks. Memahami cara mengelola dan menampilkan teks yang baik di HTML adalah langkah krusial untuk membuat website yang informatif.</p>
+        
+        <h3>Membuat Paragraf dengan Tag <code>&lt;p&gt;</code></h3>
+        <p>Paragraf didefinisikan dengan menggunakan tag <code>&lt;p&gt;</code>. Browser akan otomatis membuatkan sedikit jarak vertikal (*margin bottom & top*) antara satu paragraf dengan paragraf lainnya agar mudah dibaca.</p>
+
+        <div class='code-block'>
+            <pre><code>&lt;p&gt;Ini adalah paragraf pertama. Membahas tentang pengantar web programming.&lt;/p&gt;
+&lt;p&gt;Ini adalah paragraf kedua. Berisi materi lanjutan dari modul sebelumnya.&lt;/p&gt;</code></pre>
+        </div>
+        
+        <p><strong>Penting:</strong> Di dalam HTML, Anda tidak bisa sekadar menekan tombol 'Enter' atau spasi panjang di kode editor Anda untuk mengubah tampilan. Browser HTML akan <strong>mengabaikan</strong> semua spasi ganda dan *enter* berturut-turut, dan menjadikannya hanya satu spasi saja.</p>
+
+        <h3>Membuat Baris Baru dengan <code>&lt;br&gt;</code></h3>
+        <p>Lalu bagaimana jika kita menulis alamat atau puisi, di mana kita butuh baris baru (*line break*) tetapi tidak ingin membuat paragraf yang baru (karena jarak paragraf terlalu lebar)? Solusinya adalah menggunakan tag <code>&lt;br&gt;</code> (Break).</p>
+        
+        <div class='code-block'>
+            <pre><code>&lt;p&gt;
+    PT. AkademiTech Digital Nusantara&lt;br&gt;
+    Gedung Cyber, Lantai 5&lt;br&gt;
+    Jalan Kuningan Barat, Jakarta Selatan
+&lt;/p&gt;</code></pre>
+        </div>
+        
+        <p>Perhatikan bahwa <code>&lt;br&gt;</code> adalah *empty tag*, sehingga ia tidak memerlukan tag penutup seperti <code>&lt;/br&gt;</code>.</p>
+
+        <h3>Menjaga Format Teks Asli dengan <code>&lt;pre&gt;</code></h3>
+        <p>Ada kalanya kita benar-benar ingin browser menghormati setiap tombol Enter dan Spasi yang kita ketikkan di kode. Biasanya ini digunakan saat menampilkan kode program komputer di website. Kita menggunakan tag <code>&lt;pre&gt;</code> (Preformatted Text).</p>
+        
+        <div class='code-block'>
+            <pre><code>&lt;pre&gt;
+function sapa(nama) {
+    console.log("Halo, " + nama);
+}
+
+sapa("Budi");
+&lt;/pre&gt;</code></pre>
+        </div>
+        
+        <p>Teks di dalam <code>&lt;pre&gt;</code> umumnya akan ditampilkan menggunakan jenis font *monospace* (ukuran huruf sama lebarnya) seperti Courier New.</p>
+        
+        <h3>Memisahkan Konten dengan <code>&lt;hr&gt;</code></h3>
+        <p>Tag <code>&lt;hr&gt;</code> (Horizontal Rule) digunakan untuk membuat garis lurus mendatar yang memisahkan bagian-bagian tertentu di halaman Anda. Ini juga merupakan *empty tag*.</p>
+        
+                
+                <div style="margin-top: 40px; display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                    <a href="tag-elemen-atribut.html" class="btn btn-secondary" style="display: inline-block;">Materi Sebelumnya</a>
+                    <a href="heading-formatting.html" class="btn btn-primary" style="display: inline-block;">Materi Selanjutnya</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <footer class="footer">
+        <div class="container"><div class="footer-bottom"><p>&copy; 2026 AkademiTech Tutorials.</p></div></div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

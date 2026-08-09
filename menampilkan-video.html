@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AkademiTech | Menampilkan Video pada HTML</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body class="tutorial-page">
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class='bx bxs-graduation'></i> Akademi<span>Tech</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#courses">Program</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="tutorial-layout container">
+        <aside class="sidebar glass-panel">
+            <h3>Daftar Materi</h3>
+            <ul class="sidebar-links">
+                <li><a href="pengenalan-dasar.html">1. Pengenalan Dasar HTML</a></li>
+                <li><a href="tag-elemen-atribut.html">2. Tag, Elemen, Atribut</a></li>
+                <li><a href="teks-paragraf.html">3. Membuat Paragraf</a></li>
+                <li><a href="heading-formatting.html">4. Heading & Formatting</a></li>
+                <li><a href="membuat-link.html">5. Membuat Link</a></li>
+                <li><a href="gambar-tabel.html">6. Gambar dan Tabel</a></li>
+                <li><a href="membuat-list.html">7. Membuat List</a></li>
+                <li><a href="membuat-form.html">9. Membuat Form</a></li>
+                <li><a href="elemen-semantik.html">10. Elemen Semantik</a></li>
+                <li><a href="menampilkan-video.html">11. Video pada HTML</a></li>
+                <li><a href="menambahkan-audio.html">12. Audio pada HTML</a></li>
+                <li><a href="pengenalan-css.html">13. Dasar CSS</a></li>
+                <li><a href="selektor-css.html">14. 5 Macam Selektor</a></li>
+                <li><a href="project-web.html">15. Project Web</a></li>
+            </ul>
+        </aside>
+
+        <main class="tutorial-content">
+            <section class="tutorial-section glass-panel">
+                <h2>Menampilkan Video pada HTML</h2>
+                
+        <p>Sebelum HTML5 lahir, memutar video di browser adalah mimpi buruk. *Developer* harus memaksa pengguna menginstal ekstensi pihak ketiga yang berat dan rentan virus, seperti Adobe Flash Player atau Silverlight. Saat ini, HTML5 menyediakan solusi asli (*native*) lewat elemen <code>&lt;video&gt;</code>.</p>
+
+        <h3>1. Menggunakan Tag <code>&lt;video&gt;</code> Bawaan</h3>
+        <p>Anda cukup menyediakan file berformat `.mp4`, `.webm`, atau `.ogg`. Sangat disarankan berformat MP4 karena format inilah yang paling didukung oleh seluruh tipe browser modern.</p>
+
+        <div class='code-block'>
+            <pre><code>&lt;video width="600" height="400" controls poster="images/thumbnail-video.jpg"&gt;
+    &lt;source src="media/video-pembelajaran-html.mp4" type="video/mp4"&gt;
+    &lt;source src="media/video-pembelajaran-html.webm" type="video/webm"&gt;
+    &lt;!-- Teks fallback jika browser terlalu jadul --&gt;
+    Maaf, browser Anda sudah usang dan tidak mendukung pemutar video HTML5. Silakan perbarui browser Anda.
+&lt;/video&gt;</code></pre>
+        </div>
+
+        <h4>Membedah Atribut-Atribut Video:</h4>
+        <ul class="custom-list">
+            <li><strong><code>controls</code></strong>: Atribut wajib. Akan memunculkan panel kendali di video, seperti tombol *Play/Pause*, pengaturan Volume, *Timeline* durasi, dan fitur *Fullscreen*.</li>
+            <li><strong><code>autoplay</code></strong>: Akan otomatis memulai pemutaran saat halaman selesai di-*load*. <em>Peringatan: Karena aturan anti-spam, kebanyakan browser memblokir fitur autoplay KECUALI jika video juga diberi atribut <code>muted</code> (bisu/tanpa suara).</em></li>
+            <li><strong><code>muted</code></strong>: Membuat volume video diset ke 0 (bisu) secara bawaan.</li>
+            <li><strong><code>loop</code></strong>: Ketika video selesai (sampai detik terakhir), akan memutar kembali secara otomatis dari awal terus-menerus.</li>
+            <li><strong><code>poster="gambar.jpg"</code></strong>: Ibarat *Thumbnail* YouTube. Ini adalah gambar diam yang ditampilkan *sebelum* video mulai diputar atau saat sedang di-*buffering*.</li>
+        </ul>
+
+        <h3>2. Menanamkan Video YouTube (Embedding)</h3>
+        <p>Bagi website berskala kecil, menyimpan file MP4 (yang berukuran puluhan hingga ratusan Megabyte) secara langsung di server akan membuat server jebol (kehabisan ruang dan *bandwidth* internet cepat habis).</p>
+        
+        <p>Solusi profesional yang paling sering digunakan adalah: Unggah video Anda ke **YouTube** atau **Vimeo**, lalu gunakan fitur <em>Embed</em> menggunakan tag <code>&lt;iframe&gt;</code>.</p>
+        
+        <div class='code-block'>
+            <pre><code>&lt;h3&gt;Tonton Tutorial di Bawah Ini:&lt;/h3&gt;
+&lt;!-- Kode Iframe ini dapat di-copy secara instan dengan menekan tombol 'Share' -> 'Embed' di video YouTube --&gt;
+&lt;iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&amp;rel=0" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen&gt;
+&lt;/iframe&gt;</code></pre>
+        </div>
+        
+                
+                <div style="margin-top: 40px; display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                    <a href="elemen-semantik.html" class="btn btn-secondary" style="display: inline-block;">Materi Sebelumnya</a>
+                    <a href="menambahkan-audio.html" class="btn btn-primary" style="display: inline-block;">Materi Selanjutnya</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <footer class="footer">
+        <div class="container"><div class="footer-bottom"><p>&copy; 2026 AkademiTech Tutorials.</p></div></div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

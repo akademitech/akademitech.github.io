@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AkademiTech | Pengenalan Dasar CSS (Cascading Style Sheets)</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body class="tutorial-page">
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class='bx bxs-graduation'></i> Akademi<span>Tech</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#courses">Program</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="tutorial-layout container">
+        <aside class="sidebar glass-panel">
+            <h3>Daftar Materi</h3>
+            <ul class="sidebar-links">
+                <li><a href="pengenalan-dasar.html">1. Pengenalan Dasar HTML</a></li>
+                <li><a href="tag-elemen-atribut.html">2. Tag, Elemen, Atribut</a></li>
+                <li><a href="teks-paragraf.html">3. Membuat Paragraf</a></li>
+                <li><a href="heading-formatting.html">4. Heading & Formatting</a></li>
+                <li><a href="membuat-link.html">5. Membuat Link</a></li>
+                <li><a href="gambar-tabel.html">6. Gambar dan Tabel</a></li>
+                <li><a href="membuat-list.html">7. Membuat List</a></li>
+                <li><a href="membuat-form.html">9. Membuat Form</a></li>
+                <li><a href="elemen-semantik.html">10. Elemen Semantik</a></li>
+                <li><a href="menampilkan-video.html">11. Video pada HTML</a></li>
+                <li><a href="menambahkan-audio.html">12. Audio pada HTML</a></li>
+                <li><a href="pengenalan-css.html">13. Dasar CSS</a></li>
+                <li><a href="selektor-css.html">14. 5 Macam Selektor</a></li>
+                <li><a href="project-web.html">15. Project Web</a></li>
+            </ul>
+        </aside>
+
+        <main class="tutorial-content">
+            <section class="tutorial-section glass-panel">
+                <h2>Pengenalan Dasar CSS (Cascading Style Sheets)</h2>
+                
+        <p>Jika HTML diibaratkan sebagai kerangka tulang atau pondasi batu bata pada sebuah rumah, maka <strong>CSS</strong> adalah tukang cat, desainer interior, dan arsitek fasadnya. CSS yang memberi warna dinding, menentukan besar jendela, dan mengatur jarak antar perabotan.</p>
+
+        <p>CSS (Cascading Style Sheets) bertugas penuh untuk mengatur gaya visual (*styling*), layout, tata letak spasial, dan animasi elemen-elemen HTML di dalam *browser*.</p>
+
+        <h3>Tiga Metode Menyisipkan CSS ke dalam HTML</h3>
+        <p>Terdapat tiga cara untuk mengawinkan kode CSS dengan kerangka HTML Anda. Ketiganya valid, namun penggunaannya disesuaikan dengan kebutuhan dan skala project.</p>
+        
+        <h4>1. Inline CSS (Gaya Baris)</h4>
+        <p>CSS ditulis langsung di dalam tag HTML menggunakan atribut bernama <code>style</code>. Cara ini <strong>sangat tidak direkomendasikan</strong> untuk dipakai membuat desain menyeluruh karena membuat kode HTML Anda menjadi bengkak, berantakan, dan sulit di-*maintenance*.</p>
+        <div class='code-block'>
+            <pre><code>&lt;!-- Ini adalah Inline CSS --&gt;
+&lt;h1 style="color: blue; font-family: Arial; text-align: center;"&gt;
+    Judul Berwarna Biru di Tengah
+&lt;/h1&gt;
+&lt;p style="color: red; font-size: 18px;"&gt;Teks paragraf ini berwarna merah.&lt;/p&gt;</code></pre>
+        </div>
+
+        <h4>2. Internal / Embedded CSS</h4>
+        <p>CSS dikumpulkan pada satu lokasi di dalam dokumen HTML itu sendiri. Penulisannya dibungkus dalam tag <code>&lt;style&gt;</code> yang biasanya diletakkan pada bagian <code>&lt;head&gt;</code>. Cocok digunakan jika Anda hanya membuat web satu halaman saja (Single Page).</p>
+        <div class='code-block'>
+            <div class="code-header"><span>index.html</span></div>
+            <pre><code>&lt;head&gt;
+    &lt;title&gt;Contoh Internal CSS&lt;/title&gt;
+    &lt;style&gt;
+        /* Ini adalah blok CSS */
+        body { 
+            background-color: #f4f4f4; 
+        }
+        h1 { 
+            color: darkblue; 
+            text-align: center; 
+        }
+        p {
+            font-size: 16px;
+            color: #333333;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+        </div>
+
+        <h4>3. External CSS (Cara Paling Profesional dan Wajib)</h4>
+        <p>Memisahkan secara total antara kerangka data (HTML) dan gaya visual desain (CSS) ke dalam <strong>dua file yang terpisah secara fisik</strong>. File desain disimpan dalam ekstensi <code>.css</code> (contoh: <code>style.css</code>), kemudian dipanggil atau dikaitkan ke dalam file HTML menggunakan tag <code>&lt;link&gt;</code> di dalam <code>&lt;head&gt;</code>.</p>
+        
+        <p>Keuntungannya luar biasa besar: Satu file <code>style.css</code> dapat dipakai secara serentak untuk mengubah desain 100 file HTML secara bersamaan! Jika Anda ingin mengubah warna latar belakang 100 halaman tersebut, Anda cukup mengubah SATU baris di <code>style.css</code>.</p>
+        
+        <div class='code-block'>
+            <div class="code-header"><span>index.html</span></div>
+            <pre><code>&lt;head&gt;
+    &lt;!-- Menautkan file style.css eksternal --&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+&lt;/head&gt;</code></pre>
+        </div>
+        
+        <div class='code-block'>
+            <div class="code-header"><span>css/style.css</span></div>
+            <pre><code class="language-css">/* Semua kode murni CSS ada di sini, tanpa campur aduk tag HTML sedikitpun */
+body {
+    background-color: #1e293b;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+}
+
+button {
+    background-color: blue;
+    padding: 10px 20px;
+    border-radius: 5px;
+}</code></pre>
+        </div>
+        
+                
+                <div style="margin-top: 40px; display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                    <a href="menambahkan-audio.html" class="btn btn-secondary" style="display: inline-block;">Materi Sebelumnya</a>
+                    <a href="selektor-css.html" class="btn btn-primary" style="display: inline-block;">Materi Selanjutnya</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <footer class="footer">
+        <div class="container"><div class="footer-bottom"><p>&copy; 2026 AkademiTech Tutorials.</p></div></div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
