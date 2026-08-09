@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AkademiTech | Menambahkan Audio pada HTML</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body class="tutorial-page">
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class='bx bxs-graduation'></i> Akademi<span>Tech</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#courses">Program</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="tutorial-layout container">
+        <aside class="sidebar glass-panel">
+            <h3>Daftar Materi</h3>
+            <ul class="sidebar-links">
+                <li><a href="pengenalan-dasar.html">1. Pengenalan Dasar HTML</a></li>
+                <li><a href="tag-elemen-atribut.html">2. Tag, Elemen, Atribut</a></li>
+                <li><a href="teks-paragraf.html">3. Membuat Paragraf</a></li>
+                <li><a href="heading-formatting.html">4. Heading & Formatting</a></li>
+                <li><a href="membuat-link.html">5. Membuat Link</a></li>
+                <li><a href="gambar-tabel.html">6. Gambar dan Tabel</a></li>
+                <li><a href="membuat-list.html">7. Membuat List</a></li>
+                <li><a href="membuat-form.html">9. Membuat Form</a></li>
+                <li><a href="elemen-semantik.html">10. Elemen Semantik</a></li>
+                <li><a href="menampilkan-video.html">11. Video pada HTML</a></li>
+                <li><a href="menambahkan-audio.html">12. Audio pada HTML</a></li>
+                <li><a href="pengenalan-css.html">13. Dasar CSS</a></li>
+                <li><a href="selektor-css.html">14. 5 Macam Selektor</a></li>
+                <li><a href="project-web.html">15. Project Web</a></li>
+            </ul>
+        </aside>
+
+        <main class="tutorial-content">
+            <section class="tutorial-section glass-panel">
+                <h2>Menambahkan Audio pada HTML</h2>
+                
+        <p>Sama persis seperti elemen video, HTML5 membawa anugerah besar bagi para pecinta musik dan podcaster melalui pengenalan tag <code>&lt;audio&gt;</code>. Format file suara yang paling stabil dan umum didukung adalah <strong>MP3</strong> (.mp3), diikuti oleh WAV dan OGG.</p>
+
+        <h3>Cara Dasar Menggunakan Tag <code>&lt;audio&gt;</code></h3>
+        <p>Penerapannya sangat identik dengan tag video, hanya saja tidak ada atribut untuk lebar (width) atau tinggi (height), karena komponen audio hanya berupa bilah (bar) suara.</p>
+
+        <div class='code-block'>
+            <pre><code>&lt;h3&gt;Dengarkan Episode Podcast Terbaru Kami:&lt;/h3&gt;
+&lt;audio controls&gt;
+  &lt;source src="media/podcast-episode-01.mp3" type="audio/mpeg"&gt;
+  &lt;source src="media/podcast-episode-01.ogg" type="audio/ogg"&gt;
+  Teks ini akan muncul jika browser pengguna tidak mendukung HTML5 Audio.
+&lt;/audio&gt;</code></pre>
+        </div>
+
+        <h4>Atribut yang Didukung:</h4>
+        <ul class="custom-list">
+            <li><strong><code>controls</code>:</strong> Menampilkan tombol Play, durasi, dan ikon pengatur volume suara. Jika Anda tidak menulis atribut ini, file audio <strong>sama sekali tidak akan terlihat</strong> di layar browser (seolah-olah elemen tersebut tidak ada).</li>
+            <li><strong><code>autoplay</code>:</strong> Memutar audio sesaat halaman di-*load*. Sama dengan video, Google Chrome dan Firefox modern sangat ketat melarang website memutar suara secara tiba-tiba tanpa klik/interaksi pengguna terlebih dahulu.</li>
+            <li><strong><code>loop</code>:</strong> Musik diulang-ulang.</li>
+            <li><strong><code>muted</code>:</strong> Suara langsung disunyikan secara otomatis.</li>
+        </ul>
+
+        <h3>Studi Kasus: Membuat Musik Latar Belakang (BGM - Background Music)</h3>
+        <p>Di era awal web, banyak website (seperti blog pribadi atau website undangan pernikahan digital saat ini) yang menggunakan musik yang terus berputar di latar belakang tanpa henti.</p>
+        
+        <p>Anda bisa membuatnya dengan menyembunyikan kontrol (menghapus atribut <code>controls</code>) dan memberinya <code>autoplay loop</code>.</p>
+        
+        <div class='code-block'>
+            <pre><code>&lt;!-- Musik akan tersembunyi (karena tidak ada 'controls') dan terus berputar otomatis --&gt;
+&lt;audio autoplay loop&gt;
+  &lt;source src="lagu-romantis-pernikahan.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;</code></pre>
+        </div>
+        
+        <div class='info-box'>
+            <i class='bx bx-check-shield'></i>
+            <p><strong>Praktik Modern (Undangan Digital):</strong> Karena aturan keamanan browser yang akan membungkam fitur <em>autoplay</em> pada musik yang tersembunyi, web undangan digital modern selalu memberikan sebuah tombol besar "Buka Undangan" di halaman pertama. Tombol itulah yang di-*setting* menggunakan JavaScript untuk memicu dimulainya lagu sekaligus membuka konten website.</p>
+        </div>
+        
+                
+                <div style="margin-top: 40px; display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                    <a href="menampilkan-video.html" class="btn btn-secondary" style="display: inline-block;">Materi Sebelumnya</a>
+                    <a href="pengenalan-css.html" class="btn btn-primary" style="display: inline-block;">Materi Selanjutnya</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <footer class="footer">
+        <div class="container"><div class="footer-bottom"><p>&copy; 2026 AkademiTech Tutorials.</p></div></div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

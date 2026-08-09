@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AkademiTech | Membuat List (Daftar) di HTML</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body class="tutorial-page">
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class='bx bxs-graduation'></i> Akademi<span>Tech</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#courses">Program</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="tutorial-layout container">
+        <aside class="sidebar glass-panel">
+            <h3>Daftar Materi</h3>
+            <ul class="sidebar-links">
+                <li><a href="pengenalan-dasar.html">1. Pengenalan Dasar HTML</a></li>
+                <li><a href="tag-elemen-atribut.html">2. Tag, Elemen, Atribut</a></li>
+                <li><a href="teks-paragraf.html">3. Membuat Paragraf</a></li>
+                <li><a href="heading-formatting.html">4. Heading & Formatting</a></li>
+                <li><a href="membuat-link.html">5. Membuat Link</a></li>
+                <li><a href="gambar-tabel.html">6. Gambar dan Tabel</a></li>
+                <li><a href="membuat-list.html">7. Membuat List</a></li>
+                <li><a href="membuat-form.html">9. Membuat Form</a></li>
+                <li><a href="elemen-semantik.html">10. Elemen Semantik</a></li>
+                <li><a href="menampilkan-video.html">11. Video pada HTML</a></li>
+                <li><a href="menambahkan-audio.html">12. Audio pada HTML</a></li>
+                <li><a href="pengenalan-css.html">13. Dasar CSS</a></li>
+                <li><a href="selektor-css.html">14. 5 Macam Selektor</a></li>
+                <li><a href="project-web.html">15. Project Web</a></li>
+            </ul>
+        </aside>
+
+        <main class="tutorial-content">
+            <section class="tutorial-section glass-panel">
+                <h2>Membuat List (Daftar) di HTML</h2>
+                
+        <p>List (daftar) adalah format penyajian data yang sangat umum. Mulai dari daftar bahan makanan, langkah-langkah membuat kue, hingga menu navigasi di bagian atas website, semuanya dibuat menggunakan tag List di HTML.</p>
+
+        <h3>1. Unordered List (Daftar Tidak Berurutan)</h3>
+        <p>Digunakan saat urutan (ranking/prioritas) dari daftar tidak memiliki arti penting. Unordered list akan menghasilkan daftar dengan simbol bulat (*bullet point*). Dibungkus dengan tag <code>&lt;ul&gt;</code> dan isi per-itemnya diisi dengan <code>&lt;li&gt;</code> (List Item).</p>
+        
+        <div class='code-block'>
+            <pre><code>&lt;h3&gt;Daftar Belanja Pasar:&lt;/h3&gt;
+&lt;ul&gt;
+    &lt;li&gt;Sayur Bayam&lt;/li&gt;
+    &lt;li&gt;Minyak Goreng 2 Liter&lt;/li&gt;
+    &lt;li&gt;Garam Dapur&lt;/li&gt;
+    &lt;li&gt;Telur Ayam&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+
+        <h3>2. Ordered List (Daftar Berurutan)</h3>
+        <p>Digunakan saat urutan daftar adalah sebuah keharusan, misalnya untuk kronologi, ranking juara, atau langkah-langkah panduan (Step-by-step). Browser secara otomatis akan memberikannya penomoran berurut (1, 2, 3). Dibungkus menggunakan tag <code>&lt;ol&gt;</code>.</p>
+        
+        <div class='code-block'>
+            <pre><code>&lt;h3&gt;Cara Membuat Kopi:&lt;/h3&gt;
+&lt;ol&gt;
+    &lt;li&gt;Siapkan cangkir dan bubuk kopi.&lt;/li&gt;
+    &lt;li&gt;Tuang 2 sendok teh kopi ke dalam cangkir.&lt;/li&gt;
+    &lt;li&gt;Tuang air panas yang baru mendidih.&lt;/li&gt;
+    &lt;li&gt;Aduk merata lalu kopi siap dinikmati.&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        </div>
+        
+        <p>Anda bisa mengganti penomoran dengan angka romawi atau abjad dengan menambahkan atribut <code>type</code> pada <code>&lt;ol&gt;</code> (Misal: <code>type="A"</code>, <code>type="I"</code>, atau <code>type="a"</code>).</p>
+
+        <h3>3. Description List (Daftar Deskripsi)</h3>
+        <p>List jenis ini agak jarang dipakai, namun sangat tepat untuk format tipe Kamus (Dictionary) atau Tanya-Jawab (FAQ). Ia mendaftar sebuah istilah (Term) dan diikuti oleh penjelasan deskripsinya.</p>
+        
+        <ul class="custom-list">
+            <li><code>&lt;dl&gt;</code> (Description List): Membungkus seluruh daftar.</li>
+            <li><code>&lt;dt&gt;</code> (Description Term): Istilah/Kata yang ingin dijelaskan.</li>
+            <li><code>&lt;dd&gt;</code> (Description Detail): Penjelasan detail dari istilah tersebut. Menjorok ke kanan.</li>
+        </ul>
+        
+        <div class='code-block'>
+            <pre><code>&lt;h3&gt;Glosarium Web:&lt;/h3&gt;
+&lt;dl&gt;
+    &lt;dt&gt;&lt;strong&gt;HTML&lt;/strong&gt;&lt;/dt&gt;
+    &lt;dd&gt;Bahasa standar untuk mendefinisikan struktur dan konten website.&lt;/dd&gt;
+    
+    &lt;dt&gt;&lt;strong&gt;CSS&lt;/strong&gt;&lt;/dt&gt;
+    &lt;dd&gt;Bahasa *stylesheet* untuk mengatur warna, jarak, dan layout desain visual HTML.&lt;/dd&gt;
+    
+    &lt;dt&gt;&lt;strong&gt;JavaScript&lt;/strong&gt;&lt;/dt&gt;
+    &lt;dd&gt;Bahasa pemrograman yang membuat website menjadi interaktif dan dinamis.&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+        </div>
+        
+                
+                <div style="margin-top: 40px; display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                    <a href="gambar-tabel.html" class="btn btn-secondary" style="display: inline-block;">Materi Sebelumnya</a>
+                    <a href="membuat-form.html" class="btn btn-primary" style="display: inline-block;">Materi Selanjutnya</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <footer class="footer">
+        <div class="container"><div class="footer-bottom"><p>&copy; 2026 AkademiTech Tutorials.</p></div></div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

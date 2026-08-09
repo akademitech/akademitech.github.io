@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AkademiTech | Tag, Elemen, dan Atribut dalam HTML</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body class="tutorial-page">
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class='bx bxs-graduation'></i> Akademi<span>Tech</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#courses">Program</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="tutorial-layout container">
+        <aside class="sidebar glass-panel">
+            <h3>Daftar Materi</h3>
+            <ul class="sidebar-links">
+                <li><a href="pengenalan-dasar.html">1. Pengenalan Dasar HTML</a></li>
+                <li><a href="tag-elemen-atribut.html">2. Tag, Elemen, Atribut</a></li>
+                <li><a href="teks-paragraf.html">3. Membuat Paragraf</a></li>
+                <li><a href="heading-formatting.html">4. Heading & Formatting</a></li>
+                <li><a href="membuat-link.html">5. Membuat Link</a></li>
+                <li><a href="gambar-tabel.html">6. Gambar dan Tabel</a></li>
+                <li><a href="membuat-list.html">7. Membuat List</a></li>
+                <li><a href="membuat-form.html">9. Membuat Form</a></li>
+                <li><a href="elemen-semantik.html">10. Elemen Semantik</a></li>
+                <li><a href="menampilkan-video.html">11. Video pada HTML</a></li>
+                <li><a href="menambahkan-audio.html">12. Audio pada HTML</a></li>
+                <li><a href="pengenalan-css.html">13. Dasar CSS</a></li>
+                <li><a href="selektor-css.html">14. 5 Macam Selektor</a></li>
+                <li><a href="project-web.html">15. Project Web</a></li>
+            </ul>
+        </aside>
+
+        <main class="tutorial-content">
+            <section class="tutorial-section glass-panel">
+                <h2>Tag, Elemen, dan Atribut dalam HTML</h2>
+                
+        <p>Sebelum kita mulai membuat komponen-komponen website, kita harus memahami tata bahasa (sintaks) dasar dari HTML. Secara keseluruhan, HTML dibangun di atas tiga konsep utama: Tag, Elemen, dan Atribut.</p>
+        
+        <h3>1. Apa itu Tag HTML?</h3>
+        <p>Tag adalah penanda yang memberi instruksi kepada browser bagaimana cara menampilkan sebuah teks atau media. Tag selalu dibungkus dengan tanda kurung siku (kurung sudut) <code>&lt; &gt;</code>. Umumnya, tag hadir secara berpasangan, yakni <strong>tag pembuka</strong> dan <strong>tag penutup</strong> (yang ditandai dengan tambahan garis miring <code>/</code>).</p>
+        
+        <div class='code-block'>
+            <pre><code>&lt;p&gt;Ini adalah teks di dalam tag pembuka dan penutup.&lt;/p&gt;
+&lt;h1&gt;Ini adalah judul&lt;/h1&gt;</code></pre>
+        </div>
+        
+        <p>Beberapa tag khusus tidak memerlukan penutup dan disebut sebagai <strong>Self-closing tags</strong> (Tag mandiri) atau <strong>Empty Elements</strong>. Contohnya adalah <code>&lt;img&gt;</code> untuk gambar, <code>&lt;br&gt;</code> untuk enter baris, dan <code>&lt;hr&gt;</code> untuk garis horizontal.</p>
+
+        <h3>2. Apa itu Elemen HTML?</h3>
+        <p>Banyak pemula yang tertukar antara Tag dan Elemen. <strong>Elemen</strong> adalah keseluruhan satu kesatuan objek HTML dari awal hingga akhir, yang mencakup: Tag Pembuka + Isi Konten + Tag Penutup.</p>
+        
+        <p>Sebagai contoh, perhatikan kode berikut: <code>&lt;h1&gt;Selamat Datang&lt;/h1&gt;</code>.</p>
+        <ul class="custom-list">
+            <li><code>&lt;h1&gt;</code> adalah Tag Pembuka.</li>
+            <li>"Selamat Datang" adalah Konten.</li>
+            <li><code>&lt;/h1&gt;</code> adalah Tag Penutup.</li>
+            <li><strong>Keseluruhan baris tersebut</strong> disebut sebagai satu Elemen Heading.</li>
+        </ul>
+        
+        <h4>Elemen Bersarang (Nested Elements)</h4>
+        <p>Elemen HTML bisa (dan akan selalu) berisi elemen HTML lainnya di dalamnya. Ini disebut *Nested Elements*. Contohnya, kita menaruh elemen <code>&lt;b&gt;</code> (bold) di dalam elemen <code>&lt;p&gt;</code> (paragraf).</p>
+        
+        <div class='code-block'>
+            <pre><code>&lt;p&gt;Kalimat ini memiliki kata &lt;b&gt;yang ditebalkan&lt;/b&gt; di tengahnya.&lt;/p&gt;</code></pre>
+        </div>
+
+        <h3>3. Apa itu Atribut HTML?</h3>
+        <p>Atribut adalah semacam "bumbu tambahan" yang disematkan ke dalam elemen untuk memberikan <strong>informasi, karakteristik, atau pengaturan tambahan</strong>. Aturan penulisan atribut adalah:</p>
+        <ol class="custom-list numbered">
+            <li>Atribut <strong>hanya</strong> ditulis di dalam <strong>tag pembuka</strong>, tidak pernah di tag penutup.</li>
+            <li>Atribut umumnya berpasangan antara <code>nama</code> dan <code>nilai</code> yang dipisahkan sama dengan.</li>
+            <li>Nilai atribut wajib diapit oleh tanda kutip ganda <code>" "</code> atau kutip tunggal <code>' '</code>.</li>
+        </ol>
+        
+        <div class='code-block'>
+            <pre><code>&lt;!-- href adalah atribut, URL adalah nilainya --&gt;
+&lt;a href="https://google.com"&gt;Pergi ke Google&lt;/a&gt;
+
+&lt;!-- id dan class adalah atribut. width dan height mengatur ukuran --&gt;
+&lt;img src="foto.jpg" alt="Foto Kucing" width="300" height="200" class="foto-bulat" id="foto1"&gt;</code></pre>
+        </div>
+        
+        <div class='info-box'>
+            <i class='bx bx-info-circle'></i>
+            <p><strong>Core Attributes:</strong> Ada atribut tertentu yang bisa digunakan di hampir semua tag HTML, yang paling populer adalah <code>class</code>, <code>id</code>, <code>style</code>, dan <code>title</code>.</p>
+        </div>
+        
+                
+                <div style="margin-top: 40px; display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                    <a href="pengenalan-dasar.html" class="btn btn-secondary" style="display: inline-block;">Materi Sebelumnya</a>
+                    <a href="teks-paragraf.html" class="btn btn-primary" style="display: inline-block;">Materi Selanjutnya</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <footer class="footer">
+        <div class="container"><div class="footer-bottom"><p>&copy; 2026 AkademiTech Tutorials.</p></div></div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AkademiTech | Memahami 5 Macam Selektor pada CSS</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body class="tutorial-page">
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class='bx bxs-graduation'></i> Akademi<span>Tech</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#courses">Program</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="tutorial-layout container">
+        <aside class="sidebar glass-panel">
+            <h3>Daftar Materi</h3>
+            <ul class="sidebar-links">
+                <li><a href="pengenalan-dasar.html">1. Pengenalan Dasar HTML</a></li>
+                <li><a href="tag-elemen-atribut.html">2. Tag, Elemen, Atribut</a></li>
+                <li><a href="teks-paragraf.html">3. Membuat Paragraf</a></li>
+                <li><a href="heading-formatting.html">4. Heading & Formatting</a></li>
+                <li><a href="membuat-link.html">5. Membuat Link</a></li>
+                <li><a href="gambar-tabel.html">6. Gambar dan Tabel</a></li>
+                <li><a href="membuat-list.html">7. Membuat List</a></li>
+                <li><a href="membuat-form.html">9. Membuat Form</a></li>
+                <li><a href="elemen-semantik.html">10. Elemen Semantik</a></li>
+                <li><a href="menampilkan-video.html">11. Video pada HTML</a></li>
+                <li><a href="menambahkan-audio.html">12. Audio pada HTML</a></li>
+                <li><a href="pengenalan-css.html">13. Dasar CSS</a></li>
+                <li><a href="selektor-css.html">14. 5 Macam Selektor</a></li>
+                <li><a href="project-web.html">15. Project Web</a></li>
+            </ul>
+        </aside>
+
+        <main class="tutorial-content">
+            <section class="tutorial-section glass-panel">
+                <h2>Memahami 5 Macam Selektor pada CSS</h2>
+                
+        <p>Ketika Anda menulis kode CSS Eksternal (di dalam file <code>.css</code> terpisah), pertanyaan terbesarnya adalah: <em>"Bagaimana cara kode CSS tahu elemen HTML yang mana yang ingin ia ubah warnanya?"</em></p>
+        
+        <p>Jawabannya adalah <strong>Selektor (Selector)</strong>. Sesuai namanya, Selektor berfungsi untuk "membidik" dan menyeleksi elemen HTML spesifik sebelum gaya desain diterapkan. Terdapat 5 macam selektor dasar yang wajib dikuasai.</p>
+        
+        <h3>1. Tag / Element Selector</h3>
+        <p>Selektor paling sederhana. Memilih (membidik) elemen hanya dengan menyebut nama tag HTML-nya. Semua tag yang disebutkan akan terkena dampaknya secara global.</p>
+        <div class='code-block'>
+            <pre><code class="language-css">/* Mengubah semua teks di dalam tag &lt;p&gt; se-antero halaman menjadi biru */
+p {
+    color: blue;
+    font-size: 16px;
+}
+
+/* Mengubah latar semua tag &lt;button&gt; menjadi merah */
+button {
+    background-color: red;
+}</code></pre>
+        </div>
+
+        <h3>2. ID Selector</h3>
+        <p>Memilih elemen secara SANGAT spesifik. ID ibarat Nomor KTP bagi sebuah elemen HTML, sifatnya <strong>unik dan tidak boleh ada dua elemen yang memiliki nama ID sama</strong> dalam satu halaman.</p>
+        <p>Di HTML, elemen diberi atribut <code>id="nama_unik"</code>. Di CSS, Anda membidiknya dengan menggunakan simbol <strong>tagar (#)</strong>.</p>
+        <div class='code-block'>
+            <pre><code class="language-css">/* Hanya menghias satu elemen yang memiliki id="header-utama" */
+#header-utama {
+    background-color: black;
+    height: 100px;
+    text-align: center;
+}</code></pre>
+        </div>
+
+        <h3>3. Class Selector (Selektor Kelas)</h3>
+        <p>Ini adalah selektor yang <strong>paling sering digunakan</strong> oleh *developer* profesional (seperti di framework Bootstrap atau Tailwind). Class ibarat seragam kelompok. Berbeda dengan ID, nama Class <strong>boleh dipakai berulang kali</strong> pada sebanyak mungkin elemen yang Anda inginkan.</p>
+        <p>Di HTML, elemen diberi atribut <code>class="nama_kelas"</code>. Di CSS, Anda membidiknya dengan simbol <strong>titik (.)</strong>.</p>
+        <div class='code-block'>
+            <pre><code class="language-css">/* Semua elemen dengan class="tombol-sukses" akan berwarna hijau */
+.tombol-sukses {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+}</code></pre>
+        </div>
+
+        <h3>4. Universal Selector</h3>
+        <p>Selektor sapu jagat. Membidik <strong>seluruh elemen tanpa terkecuali</strong> (mulai dari tag html, body, div, p, h1, img) di halaman tersebut secara serentak. Disimbolkan dengan tanda <strong>bintang (*)</strong>.</p>
+        <p>Umumnya digunakan oleh *programmer* di baris paling atas CSS untuk me-reset bawaan *margin* browser (CSS Reset).</p>
+        <div class='code-block'>
+            <pre><code class="language-css">* {
+    /* Menghilangkan semua jarak bawaan browser */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}</code></pre>
+        </div>
+
+        <h3>5. Grouping Selector (Selektor Pengelompokan)</h3>
+        <p>Terkadang, Anda ingin memberi gaya yang sama persis (misal: warna font yang sama) kepada beberapa elemen berbeda, misal `h1`, `h2`, dan `p`. Daripada menulis ulang kode berulang kali, Anda bisa mengelompokkannya dan memisahkannya dengan tanda <strong>koma (,)</strong>.</p>
+        <div class='code-block'>
+            <pre><code class="language-css">/* Menyatukan h1, h2, dan class .teks-kuning agar sama-sama berwarna kuning */
+h1, h2, .teks-kuning {
+    color: yellow;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 2px;
+}</code></pre>
+        </div>
+        
+                
+                <div style="margin-top: 40px; display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                    <a href="pengenalan-css.html" class="btn btn-secondary" style="display: inline-block;">Materi Sebelumnya</a>
+                    <a href="project-web.html" class="btn btn-primary" style="display: inline-block;">Materi Selanjutnya</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <footer class="footer">
+        <div class="container"><div class="footer-bottom"><p>&copy; 2026 AkademiTech Tutorials.</p></div></div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

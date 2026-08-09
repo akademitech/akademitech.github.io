@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AkademiTech | Gambar dan Tabel di HTML</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body class="tutorial-page">
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class='bx bxs-graduation'></i> Akademi<span>Tech</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#courses">Program</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="tutorial-layout container">
+        <aside class="sidebar glass-panel">
+            <h3>Daftar Materi</h3>
+            <ul class="sidebar-links">
+                <li><a href="pengenalan-dasar.html">1. Pengenalan Dasar HTML</a></li>
+                <li><a href="tag-elemen-atribut.html">2. Tag, Elemen, Atribut</a></li>
+                <li><a href="teks-paragraf.html">3. Membuat Paragraf</a></li>
+                <li><a href="heading-formatting.html">4. Heading & Formatting</a></li>
+                <li><a href="membuat-link.html">5. Membuat Link</a></li>
+                <li><a href="gambar-tabel.html">6. Gambar dan Tabel</a></li>
+                <li><a href="membuat-list.html">7. Membuat List</a></li>
+                <li><a href="membuat-form.html">9. Membuat Form</a></li>
+                <li><a href="elemen-semantik.html">10. Elemen Semantik</a></li>
+                <li><a href="menampilkan-video.html">11. Video pada HTML</a></li>
+                <li><a href="menambahkan-audio.html">12. Audio pada HTML</a></li>
+                <li><a href="pengenalan-css.html">13. Dasar CSS</a></li>
+                <li><a href="selektor-css.html">14. 5 Macam Selektor</a></li>
+                <li><a href="project-web.html">15. Project Web</a></li>
+            </ul>
+        </aside>
+
+        <main class="tutorial-content">
+            <section class="tutorial-section glass-panel">
+                <h2>Gambar dan Tabel di HTML</h2>
+                
+        <h3>1. Menyisipkan Gambar di Halaman Web</h3>
+        <p>Halaman web yang hanya berisi teks akan sangat membosankan. Kita membutuhkan elemen visual. Gambar dapat ditambahkan menggunakan tag <code>&lt;img&gt;</code> (Image). Tag ini adalah tag kosong (*empty element*), ia tidak memiliki penutup <code>&lt;/img&gt;</code>.</p>
+        
+        <p>Tag img membutuhkan dua atribut yang sangat krusial:</p>
+        <ul class="custom-list">
+            <li><strong><code>src</code> (Source):</strong> Alamat letak file gambar. Bisa berupa link dari internet atau link relatif dari komputer lokal (misal: <code>folder_gambar/foto1.jpg</code>).</li>
+            <li><strong><code>alt</code> (Alternative Text):</strong> Teks pengganti yang akan muncul jika gambar gagal dimuat (misal karena koneksi lambat atau file terhapus). Teks alt juga dibaca oleh aplikasi pembaca layar tunanetra dan sangat penting untuk SEO.</li>
+        </ul>
+        
+        <div class='code-block'>
+            <pre><code>&lt;!-- Gambar dari lokal --&gt;
+&lt;img src="images/foto-profil.jpg" alt="Foto Profil Saya" width="200" height="200"&gt;
+
+&lt;!-- Gambar dari internet --&gt;
+&lt;img src="https://source.unsplash.com/random/400x300" alt="Gambar Acak dari Unsplash"&gt;</code></pre>
+        </div>
+        
+        <p><strong>Catatan:</strong> Atribut <code>width</code> (lebar) dan <code>height</code> (tinggi) menentukan ukuran gambar dalam satuan pixel. Meskipun bisa diatur lewat HTML, cara modern yang disarankan adalah menggunakan CSS untuk mengatur ukuran gambar agar lebih responsif.</p>
+
+        <h3>2. Membuat Struktur Tabel yang Rapi</h3>
+        <p>Tabel sangat ideal untuk merepresentasikan data dua dimensi (baris dan kolom), seperti jadwal pelajaran, daftar harga, atau laporan nilai. Membuat tabel di HTML gampang-gampang susah karena membutuhkan rangkaian bersarang (*nested*) dari beberapa tag.</p>
+        
+        <p>Komponen dasar tabel:</p>
+        <ul class="custom-list">
+            <li><code>&lt;table&gt;</code>: Pembungkus induk keseluruhan tabel.</li>
+            <li><code>&lt;tr&gt;</code> (Table Row): Berfungsi untuk membuat <strong>Baris</strong> secara mendatar.</li>
+            <li><code>&lt;th&gt;</code> (Table Header): Sel khusus untuk judul kolom. Teks di dalamnya otomatis tebal dan rata tengah.</li>
+            <li><code>&lt;td&gt;</code> (Table Data): Sel biasa untuk menampilkan isi data.</li>
+        </ul>
+
+        <div class='code-block'>
+            <pre><code>&lt;table border="1" cellpadding="10" cellspacing="0" width="100%"&gt;
+    &lt;!-- Baris Judul --&gt;
+    &lt;tr&gt;
+        &lt;th&gt;No&lt;/th&gt;
+        &lt;th&gt;Nama Siswa&lt;/th&gt;
+        &lt;th&gt;Nilai Ujian&lt;/th&gt;
+    &lt;/tr&gt;
+    
+    &lt;!-- Baris Data 1 --&gt;
+    &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;Andi Syahputra&lt;/td&gt;
+        &lt;td&gt;95&lt;/td&gt;
+    &lt;/tr&gt;
+    
+    &lt;!-- Baris Data 2 --&gt;
+    &lt;tr&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;Budi Santoso&lt;/td&gt;
+        &lt;td&gt;88&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        </div>
+        
+        <h4>Menggabungkan Sel (Merge Cells)</h4>
+        <p>Mirip fitur Merge di Microsoft Excel, kita bisa menggabungkan kolom ke samping dengan atribut <code>colspan="jumlah"</code> dan menggabungkan baris ke bawah dengan <code>rowspan="jumlah"</code> pada elemen <code>&lt;td&gt;</code>.</p>
+        
+                
+                <div style="margin-top: 40px; display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                    <a href="membuat-link.html" class="btn btn-secondary" style="display: inline-block;">Materi Sebelumnya</a>
+                    <a href="membuat-list.html" class="btn btn-primary" style="display: inline-block;">Materi Selanjutnya</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <footer class="footer">
+        <div class="container"><div class="footer-bottom"><p>&copy; 2026 AkademiTech Tutorials.</p></div></div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

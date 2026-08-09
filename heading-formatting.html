@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AkademiTech | Heading, Komentar, dan Text Formatting</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body class="tutorial-page">
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class='bx bxs-graduation'></i> Akademi<span>Tech</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#courses">Program</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="tutorial-layout container">
+        <aside class="sidebar glass-panel">
+            <h3>Daftar Materi</h3>
+            <ul class="sidebar-links">
+                <li><a href="pengenalan-dasar.html">1. Pengenalan Dasar HTML</a></li>
+                <li><a href="tag-elemen-atribut.html">2. Tag, Elemen, Atribut</a></li>
+                <li><a href="teks-paragraf.html">3. Membuat Paragraf</a></li>
+                <li><a href="heading-formatting.html">4. Heading & Formatting</a></li>
+                <li><a href="membuat-link.html">5. Membuat Link</a></li>
+                <li><a href="gambar-tabel.html">6. Gambar dan Tabel</a></li>
+                <li><a href="membuat-list.html">7. Membuat List</a></li>
+                <li><a href="membuat-form.html">9. Membuat Form</a></li>
+                <li><a href="elemen-semantik.html">10. Elemen Semantik</a></li>
+                <li><a href="menampilkan-video.html">11. Video pada HTML</a></li>
+                <li><a href="menambahkan-audio.html">12. Audio pada HTML</a></li>
+                <li><a href="pengenalan-css.html">13. Dasar CSS</a></li>
+                <li><a href="selektor-css.html">14. 5 Macam Selektor</a></li>
+                <li><a href="project-web.html">15. Project Web</a></li>
+            </ul>
+        </aside>
+
+        <main class="tutorial-content">
+            <section class="tutorial-section glass-panel">
+                <h2>Heading, Komentar, dan Text Formatting</h2>
+                
+        <h3>Menggunakan Heading (Judul)</h3>
+        <p>Sama seperti saat membaca koran, sebuah website membutuhkan hirarki Judul dan Sub-judul agar mudah dipindai oleh mata pembaca. HTML menyediakan 6 tingkatan heading, mulai dari <code>&lt;h1&gt;</code> hingga <code>&lt;h6&gt;</code>.</p>
+
+        <div class='code-block'>
+            <pre><code>&lt;h1&gt;Judul Artikel Paling Utama (h1)&lt;/h1&gt;
+&lt;h2&gt;Sub-judul Level 2 (h2)&lt;/h2&gt;
+&lt;h3&gt;Sub-judul Level 3 (h3)&lt;/h3&gt;
+&lt;h4&gt;Level 4 (h4)&lt;/h4&gt;
+&lt;h5&gt;Level 5 (h5)&lt;/h5&gt;
+&lt;h6&gt;Level 6 (Terkecil)&lt;/h6&gt;</code></pre>
+        </div>
+        
+        <div class='info-box'>
+            <i class='bx bx-search-alt-2'></i>
+            <p><strong>Praktek SEO yang Baik:</strong> Google (Mesin Pencari) sangat memperhatikan tag Heading. Pastikan halaman web Anda <strong>hanya memiliki satu buah <code>&lt;h1&gt;</code></strong> yang menjelaskan secara menyeluruh tentang isi halaman tersebut. Sisanya, gunakan h2, h3, dan seterusnya secara terstruktur layaknya daftar isi buku.</p>
+        </div>
+
+        <h3>Memberikan Komentar (Comment) di HTML</h3>
+        <p>Komentar adalah baris kode yang hanya bisa dilihat oleh *programmer* (di kode sumber), tetapi <strong>sama sekali tidak akan ditampilkan di layar browser</strong> pengguna. Komentar sangat berguna untuk mendokumentasikan kode atau "mematikan" blok kode sementara waktu saat proses pengujian.</p>
+        
+        <div class='code-block'>
+            <pre><code>&lt;!-- Ini adalah area komentar HTML --&gt;
+&lt;!-- Bagian di bawah ini adalah Menu Header --&gt;
+&lt;div class="header"&gt;
+    &lt;h1&gt;Logo Saya&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;!-- &lt;p&gt;Paragraf ini tidak akan dirender oleh browser&lt;/p&gt; --&gt;</code></pre>
+        </div>
+
+        <h3>Text Formatting (Memformat Teks)</h3>
+        <p>Bosan dengan teks biasa? HTML menyediakan banyak tag (disebut tag pemformatan) untuk mengubah gaya teks, sama seperti fitur *Bold* atau *Italic* di Microsoft Word.</p>
+        
+        <ul class='custom-list'>
+            <li><code>&lt;b&gt;</code> dan <code>&lt;strong&gt;</code>: Keduanya menghasilkan <strong>Teks Tebal (Bold)</strong>. Namun, <code>&lt;strong&gt;</code> memberikan makna *semantik* bahwa teks tersebut sangat penting (Berguna untuk *screen reader* penyandang tunanetra).</li>
+            <li><code>&lt;i&gt;</code> dan <code>&lt;em&gt;</code>: Menghasilkan <em>Teks Miring (Italic)</em>. Tag <code>&lt;em&gt;</code> memberikan makna penekanan intonasi suara.</li>
+            <li><code>&lt;u&gt;</code>: Memberikan <u>Garis Bawah (Underline)</u>.</li>
+            <li><code>&lt;mark&gt;</code>: Memberikan warna latar belakang seperti distabilo <mark>Highlight text</mark>.</li>
+            <li><code>&lt;del&gt;</code>: Menandai teks yang dihapus atau tidak berlaku lagi. Browser menampilkannya dengan coretan: <del>Harga Lama Rp 100.000</del>.</li>
+            <li><code>&lt;ins&gt;</code>: Teks yang baru saja ditambahkan, biasanya berpasangan dengan del: <ins>Harga Baru Rp 50.000</ins>.</li>
+            <li><code>&lt;sup&gt;</code>: Superscript. Membuat teks menjadi kecil di atas. Sangat cocok untuk bilangan pangkat: X<sup>2</sup> + Y<sup>2</sup> = Z<sup>2</sup>.</li>
+            <li><code>&lt;sub&gt;</code>: Subscript. Membuat teks menjadi kecil di bawah. Cocok untuk rumus kimia: H<sub>2</sub>O.</li>
+        </ul>
+        
+                
+                <div style="margin-top: 40px; display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                    <a href="teks-paragraf.html" class="btn btn-secondary" style="display: inline-block;">Materi Sebelumnya</a>
+                    <a href="membuat-link.html" class="btn btn-primary" style="display: inline-block;">Materi Selanjutnya</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <footer class="footer">
+        <div class="container"><div class="footer-bottom"><p>&copy; 2026 AkademiTech Tutorials.</p></div></div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
